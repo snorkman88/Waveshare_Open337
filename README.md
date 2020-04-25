@@ -60,7 +60,7 @@ Therefore, this tool does not seem to be appropriate for flashing this chip.
 
 ### Alternative 2: mxli (Did not have time to test it YET). 
 
-## ISP Programming via USB0 using "dfu-util"
+## ISP Programming via USB using "dfu-util"
 The second possible method for writting the "hex" or "bin" into the flash memory of the chip, is making the LPC4337 boot from USB in DFU "device" mode. 
 
 **IMPORTANT:** Once again, it is important to remark that this method is only possible if the target chip that you are trying to flash already has implemented on it the "device" side of the USB DFU protocol. If so, then your computer/notebook will adopt the role of "host" of the [USB DFU PROTOCOL] (https://www.usb.org/sites/default/files/DFU_1.1.pdf). 
