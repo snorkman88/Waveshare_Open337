@@ -73,6 +73,7 @@ https://www.nxp.com/design/microcontrollers-developer-resources/lpc-microcontrol
 **LPCScrypt for Linux is a 64-bit application, SO IT WILL NOT RUN on 32-bit systems**.  
 
 **LINUX USERS:** when you download lpcscrypt for linux, the extension of it will be **.deb.bin** just run it with. 
+
 `sudo sh lpcscrypt-2.1.1_15.x86_64.deb.bin`.  
 To me the most difficult part of running lpcscrypt was finding it after the installation, so if happen to be in the same situation as me try looking for it in **/usr/local/lpcscrypt/scripts**.  
 
