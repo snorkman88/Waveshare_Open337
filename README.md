@@ -78,14 +78,19 @@ https://www.nxp.com/design/microcontrollers-developer-resources/lpc-microcontrol
 
 To me the most difficult part of running lpcscrypt was finding it after the installation, so if you happen to be in the same situation as me try looking for it in **/usr/local/lpcscrypt/scripts**.  
 
-Once dfu-util + lpscrypt + dependencies are installed and configured your are ready to make the board boot into this mode. 
+Once dfu-util + lpscrypt + dependencies are installed and configured, your are ready to make the board boot into this mode. 
 
 a) Configure the "Boot Source Bits" P1_2 and P2_8 to a logical state of "1".  
 ![](https://github.com/snorkman88/Waveshare_Open337/blob/master/boot_from_usb0.jpg). 
 b) Plug the cable to USB1. 
 c) Short P2_7 to GND and press the reset button in order to make it go into ISP mode.  
-d) Verify that is already in DFU mode by running lsusb and you should see it listed. 
+d) Verify that is already in DFU mode by running `lsusb` and you should see it listed.  
+![](https://github.com/snorkman88/Waveshare_Open337/blob/master/lsusb.png). 
+e) run lpcscrypt CLI tool `./LPCscrypt_CLI` and you are ready to flash your chip.  
+f) Check partinfo, wipe and flash your file.  
+![](https://github.com/snorkman88/Waveshare_Open337/blob/master/lpcscrypt_cli_program.png). 
 
-e) run lpcscrypt CLI tool `./LPCscrypt_CLI`. 
+DONE! :-D. 
 
-If any other doubts remain please read the user guide: https://www.nxp.com/docs/en/user-guide/LPCScrypt_User_Guide.pdf
+
+If any other doubts about lpscrypt still remain, please refer to the user guide: https://www.nxp.com/docs/en/user-guide/LPCScrypt_User_Guide.pdf. 
