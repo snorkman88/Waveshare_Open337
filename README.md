@@ -7,10 +7,10 @@ When I started from scratch with Cortex-M series Microcontrollers and particular
 Keep in mind that the LPC4337 has 2 banks of flash A & B (Chapter 7.11 - On-chip flash memory). 
 
 # About the board
-
+![](https://github.com/snorkman88/Waveshare_Open337/blob/master/all_together.jpg). 
 In the box there is nothing else besides the two boards and 2 usb cables.  
 
-**IMPORTANT: there isn't an embedded JTAG debgger in this kit, you will have to buy one separately.**. 
+**IMPORTANT: there isn't an embedded JTAG debugger in this kit, you will have to buy one separately.**. 
 
 ## The Core B1 board
 The core board hosts the microcontroller and the peripherals connected to the row of pin headers as well as 2 USB ports and a set of jumpers to configure the aforementioned "Boot Source Bits".
