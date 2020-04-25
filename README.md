@@ -46,7 +46,7 @@ and you should receive something like this.
 
 e) Write your hex to your chip. 
 
-Although steps a) to d) are still valid for LPC43xx chips, step e) will always fail.  
+Although steps **a)** to **d)** are still valid for LPC43xx chips, step **e)** will always fail.  
 ![failedcopy](https://github.com/snorkman88/Waveshare_Open337/blob/master/failedcopy.png)
 After spending almost two days going through the debug lines y started checking the "prepare P" and "copy C" commands sent to the device and realized that I missed a very important and well documented detail http://manpages.ubuntu.com/manpages/xenial/man1/lpc21isp.1.html. 
 
