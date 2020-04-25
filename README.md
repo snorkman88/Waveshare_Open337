@@ -1,5 +1,5 @@
-# Core B1 + Waveshare_Open337 expansion board
-This repo is aimed to help anyone who has recently bought the Waveshare Core B1 + Open4337-C expansion board and need a little push/help to start programming/flashing code into it.
+# Core B1 + Open337 expansion board by Waveshare
+This repo is aimed to help anyone who has recently bought the Waveshare Core B1 + Open4337-C expansion board and needs a little push/help to start programming/flashing code into it.
 
 When I started from scratch with Cortex-M series Microcontrollers and particularly with this board (which hosts an NXP LPC4337-JBD144), the biggest issue I had at the beginning was how to comunicate with it since there isn't that much info provided by Waveshare on how to program the flash memory of the chip. The only article I've found uses Windows and a program called Flashmagic to programm the ".hex", so it was useless to me because I use Ubuntu and Mac.
 
