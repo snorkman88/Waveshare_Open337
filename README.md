@@ -60,3 +60,28 @@ Therefore, this tool does not seem to be appropriate for flashing this chip.
 
 ### Alternative 2: mxli (Did not have time to test it YET). 
 
+## ISP Programming via USB0 using "dfu-util"
+The second possible method for writting the "hex" or "bin" into the flash memory of the chip, is making the LPC4337 boot from USB0 DFU. 
+
+**IMPORTANT:** Once again, it is important to remark that this method is only possible if the target chip that you are trying to flash already has implemented on it the "device" side of the USB DFU protocol. If so, then your computer/notebook will adopt the role of "host" of the [USB DFU PROTOCOL] (https://www.usb.org/sites/default/files/DFU_1.1.pdf). 
+http://manpages.ubuntu.com/manpages/xenial/man1/dfu-util.1.html. 
+This will make possible the communication between PC(a.k.a host) and the LPC chip(a.k.a device). 
+
+Before you interact with the board you must first install "LPCSCRYPT" which is a script developed and supported by NXP.  
+https://www.nxp.com/design/microcontrollers-developer-resources/lpc-microcontroller-utilities/lpcscrypt-v2-1-1:LPCSCRYPT?&tab=Design_Tools_Tab7
+
+**LPCScrypt for Linux is a 64-bit application, SO IT WILL NOT RUN on 32-bit systems**.  
+
+**LINUX USERS:** when you download lpcscrypt for linux, the extension of it will be **.deb.bin** just run it with "`sudo sh lpcscrypt-2.1.1_15.x86_64.deb.bin`".  
+To me the most difficult part of running lpcscrypt was finding it after the installation, so if happen to be in the same situation as me try looking for it in **/usr/local/lpcscrypt/scripts**.  
+
+To make the board boot into this mode
+a) Configure the "Boot Source Bits" P1_2 and P2_8 to a logical state of "1".  
+![](https://github.com/snorkman88/Waveshare_Open337/blob/master/boot_from_usb0.jpg). 
+b) Plug the cable to USB1. 
+c) Short P2_7 to GND and press the reset button in order to make it go into ISP mode.  
+d) Verify that is already in DFU mode by running lsusb and you should see it listed. 
+
+e) run lpcscrypt CLI tool `./LPCscrypt_CLI`. 
+
+If any other doubts remain please read the user guide: https://www.nxp.com/docs/en/user-guide/LPCScrypt_User_Guide.pdf
