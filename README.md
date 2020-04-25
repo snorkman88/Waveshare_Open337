@@ -24,20 +24,20 @@ I will present two possible ways of flashing bin or hex files into the chip.
 
 ## ISP Programming via USART0
 If you start looking for possible tools to flash the most of them will lead you to the same one Flashmagic. Sadly this app only works on Windows.
-### Alternative 1: lpc21isp (NOT SUITABLE FOR flashing LPC43XX, April 2020)
-I've found lpc21isp as a possible alternative to flash NXP's cortex microcontrollers.
-a) Boot source bits must be configured all to 0 (USART0).
-b) Plug the USB cable to the UART0 of the Open4337 expansion board.
-c) Short P2_7 to GND and press the reset button in order to make it go into ISP mode.
-d) Run lpc21isp to detect your chip. Pay attention to the parameters that you need to pass i.e: baudrate, specify externsion (bin or hex), Osc frequency **in KHz**.
-and you should receive something like this
-e) Write your hex to your chip
+### Alternative 1: lpc21isp (NOT SUITABLE FOR flashing LPC43XX, April 2020). 
+I've found lpc21isp as a possible alternative to flash NXP's cortex microcontrollers.  
+a) Boot source bits must be configured all to 0 (USART0).  
+b) Plug the USB cable to the UART0 of the Open4337 expansion board.  
+c) Short P2_7 to GND and press the reset button in order to make it go into ISP mode.  
+d) Run lpc21isp to detect your chip. Pay attention to the parameters that you need to pass i.e: baudrate, specify externsion (bin or hex), Osc frequency **in KHz**.  
+and you should receive something like this. 
+e) Write your hex to your chip. 
 
 Although steps a) to d) are still valid for LPC43xx chips, step e) will always fail.
 After spending almost two days going through the debug lines y started checking the "prepare P" and "copy C" commands sent to the device and realized that I missed a very important and well documented detail http://manpages.ubuntu.com/manpages/xenial/man1/lpc21isp.1.html
-"This tool has been specifically designed for LPC1100/LPC1300/LPC1700/LPC2000 series ARM7/Cortex-M0/Cortex-M3 microcontrollers."
-So to sum up, seems like lpc21isp does not have the memory map of the LPC4337 in it and it's always trying to write from RAM to the address 0 of the Flash. However, since BankA of the flash starts at 0x1A000000 (decimal 436207616) the chip always returned "Destination address is not mapped in the memory map".
-Therefore this tool does not seem to be appropriate for flashing this chip.
+"This tool has been specifically designed for LPC1100/LPC1300/LPC1700/LPC2000 series ARM7/Cortex-M0/Cortex-M3 microcontrollers."  
+So to sum up, seems like lpc21isp does not have the memory map of the LPC4337 in it and it's always trying to write from RAM to the address 0 of the Flash. However, since BankA of the flash starts at 0x1A000000 (decimal 436207616) the chip always returned "Destination address is not mapped in the memory map".  
+Therefore, this tool does not seem to be appropriate for flashing this chip.  
 
 
-### Alternative 2: mxli
+### Alternative 2: mxli. 
