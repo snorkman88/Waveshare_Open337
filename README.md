@@ -43,10 +43,12 @@ e) Write your hex to your chip.
 
 Although steps a) to d) are still valid for LPC43xx chips, step e) will always fail.  
 ![failedcopy](https://github.com/snorkman88/Waveshare_Open337/blob/master/failedcopy.png)
-After spending almost two days going through the debug lines y started checking the "prepare P" and "copy C" commands sent to the device and realized that I missed a very important and well documented detail http://manpages.ubuntu.com/manpages/xenial/man1/lpc21isp.1.html
+After spending almost two days going through the debug lines y started checking the "prepare P" and "copy C" commands sent to the device and realized that I missed a very important and well documented detail http://manpages.ubuntu.com/manpages/xenial/man1/lpc21isp.1.html. 
+
 "This tool has been specifically designed for LPC1100/LPC1300/LPC1700/LPC2000 series ARM7/Cortex-M0/Cortex-M3 microcontrollers".  
 
-![debug](https://github.com/snorkman88/Waveshare_Open337/blob/master/debug.png)
+![debug](https://github.com/snorkman88/Waveshare_Open337/blob/master/debug.png). 
+
 So to sum up, seems like lpc21isp does not have the memory map of the LPC4337 in it and it's always trying to write from RAM to the address 0 of the Flash. However, since BankA of the flash starts at 0x1A000000 (decimal 436207616) the chip always returned "Destination address is not mapped in the memory map".  
 Therefore, this tool does not seem to be appropriate for flashing this chip.  
 
