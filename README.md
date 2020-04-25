@@ -18,7 +18,8 @@ Core B1 schematic: https://www.waveshare.com/w/upload/1/16/Core4337-Schematic.pd
 
 ## The Open4337-C expansion Board
 Not too much to say about about this. Cool thing about the board is that it already has a PL-2303 in charge of adapting the USART0.  
-![https://github.com/snorkman88/Waveshare_Open337/blob/master/expansion_board.HEIC]
+![](https://github.com/snorkman88/Waveshare_Open337/blob/master/expansion_board.jpg)
+![](https://github.com/snorkman88/Waveshare_Open337/blob/master/uart_on_expansion.jpg)
 Expansion board schematic: https://www.waveshare.com/w/upload/9/96/Open4337-C-Schematic.pdf
 
 # How to flash the chip?
