@@ -53,4 +53,5 @@ So to sum up, seems like lpc21isp does not have the memory map of the LPC4337 in
 Therefore, this tool does not seem to be appropriate for flashing this chip.  
 
 
-### Alternative 2: mxli. 
+### Alternative 2: mxli (Did not have time to test it YET). 
+
