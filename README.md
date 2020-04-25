@@ -30,9 +30,15 @@ a) Boot source bits must be configured all to 0 (USART0).
 b) Plug the USB cable to the UART0 of the Open4337 expansion board.  
 c) Short P2_7 to GND and press the reset button in order to make it go into ISP mode.  
 d) Run lpc21isp to detect your chip. Pay attention to the parameters that you need to pass i.e: baudrate, specify externsion (bin or hex), Osc frequency **in KHz**.
-![lpcmanual](https://github.com/snorkman88/Waveshare_Open337/blob/master/lpcmanual.png).
+
+
+![lpcmanual](https://github.com/snorkman88/Waveshare_Open337/blob/master/lpcmanual.png).  
+
 and you should receive something like this.   
+
 ![detectonly](https://github.com/snorkman88/Waveshare_Open337/blob/master/detectonly.png).  
+
+
 e) Write your hex to your chip. 
 
 Although steps a) to d) are still valid for LPC43xx chips, step e) will always fail.
