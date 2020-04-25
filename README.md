@@ -61,10 +61,10 @@ Therefore, this tool does not seem to be appropriate for flashing this chip.
 ### Alternative 2: mxli (Did not have time to test it YET). 
 
 ## ISP Programming via USB0 using "dfu-util"
-The second possible method for writting the "hex" or "bin" into the flash memory of the chip, is making the LPC4337 boot from USB0 DFU. 
+The second possible method for writting the "hex" or "bin" into the flash memory of the chip, is making the LPC4337 boot from USB in DFU "device" mode. 
 
 **IMPORTANT:** Once again, it is important to remark that this method is only possible if the target chip that you are trying to flash already has implemented on it the "device" side of the USB DFU protocol. If so, then your computer/notebook will adopt the role of "host" of the [USB DFU PROTOCOL] (https://www.usb.org/sites/default/files/DFU_1.1.pdf). 
-http://manpages.ubuntu.com/manpages/xenial/man1/dfu-util.1.html. 
+http://manpages.ubuntu.com/manpages/xenial/man1/dfu-util.1.html.  
 This will make possible the communication between PC(a.k.a host) and the LPC chip(a.k.a device). 
 
 Before you interact with the board you must first install "LPCSCRYPT" which is a script developed and supported by NXP.  
