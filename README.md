@@ -1,10 +1,10 @@
 # Core B1 + Waveshare_Open337 expansion board
 This repo is aimed to help anyone who has recently bought the Waveshare Core B1 + Open4337-C expansion board and need a little push/help to start programming/flashing code into it.
 
-When I started from scratch with Cortex-M series Microcontrollers and particularly with this board (which hosts an NXP LPC4337-JBD144), the biggest issue I had at the beginning was how to comunicate with it since there isn't that much info provided by Waveshare on how to program flash memory of the chip. The only article I've found uses Windows and a program called Flashmagic to programm the ".hex", so it was useless to me.
+When I started from scratch with Cortex-M series Microcontrollers and particularly with this board (which hosts an NXP LPC4337-JBD144), the biggest issue I had at the beginning was how to comunicate with it since there isn't that much info provided by Waveshare on how to program the flash memory of the chip. The only article I've found uses Windows and a program called Flashmagic to programm the ".hex", so it was useless to me because I use Ubuntu and Mac.
 
-STOP!! --> Before continuing, it is strongly suggested that the reader gets familiar Chapter 7 of the LPC4337's datasheet and have a clear picture of what the "Boot Source Bits" of the LPC4337 do.
-Talk about flash banks
+**STOP!! -->** Before continuing, it is strongly suggested that the reader gets familiar Chapter 7 of the LPC4337's datasheet and have a clear picture of what the "Boot Source Bits" of the LPC4337 do. 
+Keep in mind that the LPC4337 has 2 banks of flash A & B (Chapter 7.11 - On-chip flash memory). 
 
 # About the board
 
@@ -12,7 +12,8 @@ In the box there is nothing else besides the two boards and 2 usb cables.
 
 ## The Core B1 board
 The core board hosts the microcontroller and the peripherals connected to the row of pin headers as well as 2 USB ports and a set of jumpers to configure the aforementioned "Boot Source Bits".
-
+![coreboard1](https://github.com/snorkman88/Waveshare_Open337/blob/master/core_front.jpg)
+![coreback](https://github.com/snorkman88/Waveshare_Open337/blob/master/core_back.jpg)
 Core B1 schematic: https://www.waveshare.com/w/upload/1/16/Core4337-Schematic.pdf
 
 ## The Open4337-C expansion Board
